@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ViewScreenController">
+   <children>
+      <Button fx:id="MainButtonView" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#MainClickView" text="Main Menu" />
+      <TableView fx:id="ViewTable" layoutX="110.0" layoutY="40.0" prefHeight="400.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="ViewPlateNumber" prefWidth="135.0" text="License Plate Number" />
+          <TableColumn fx:id="ViewManufact" prefWidth="92.0" text="Manufacturer" />
+            <TableColumn fx:id="ViewModel" prefWidth="107.0" text="Model" />
+            <TableColumn fx:id="ViewEngine" prefWidth="120.0" text="Engine Type" />
+            <TableColumn fx:id="ViewCost" prefWidth="125.0" text="Rental Cost / Day" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
