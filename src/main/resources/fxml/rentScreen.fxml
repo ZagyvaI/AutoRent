@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RentScreenController">
    <children>
-      <Button fx:id="MainButtonRent" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#MainClickRent" text="Main Menu" textAlignment="CENTER" />
+      <Button fx:id="MainButtonRent" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#mainClickRent" text="Main Menu" textAlignment="CENTER" />
       <TextField fx:id="AddName" layoutX="40.0" layoutY="29.0" />
       <TextField fx:id="AddPhone" layoutX="296.0" layoutY="29.0" />
       <DatePicker fx:id="AddDateFrom" layoutX="513.0" layoutY="29.0" />
@@ -19,7 +19,7 @@
       <Label layoutX="210.0" layoutY="33.0" text="Phone Number:" />
       <Label layoutX="479.0" layoutY="33.0" text="From:" />
       <Label layoutX="492.0" layoutY="67.0" text="To:" />
-      <Button fx:id="RentSelected" layoutX="708.0" layoutY="29.0" mnemonicParsing="false" onAction="#RentSelectedClick" prefHeight="59.0" prefWidth="62.0" text="Rent Car" textAlignment="CENTER" />
+      <Button fx:id="RentSelected" layoutX="708.0" layoutY="29.0" mnemonicParsing="false" onAction="#rentSelectedClick" prefHeight="59.0" prefWidth="62.0" text="Rent Car" textAlignment="CENTER" />
       <TableView fx:id="RentTable" layoutX="110.0" layoutY="137.0" prefHeight="317.0" prefWidth="581.0">
         <columns>
           <TableColumn fx:id="RentPlateNumber" prefWidth="135.0" text="License Plate Number" />

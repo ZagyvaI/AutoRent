@@ -84,7 +84,7 @@ public class ViewScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Logger.info("Initializing database...");
-        LoadDatabase();
+        loadDatabase();
     }
 
     /**
@@ -92,7 +92,7 @@ public class ViewScreenController implements Initializable {
      * @param event A button press down.
      */
     @FXML
-    public void MainClickView(ActionEvent event) {
+    public void mainClickView(ActionEvent event) {
         Logger.info("Returning to the Main Screen...");
         try {
             Node source = (Node) event.getSource();
@@ -114,7 +114,7 @@ public class ViewScreenController implements Initializable {
      * This method is called, when the window is opened up, and loads the data from the database.
      */
     @FXML
-    private void LoadDatabase() {
+    private void loadDatabase() {
         Logger.info("Processing...");
         try {
             emf = Persistence.createEntityManagerFactory("jpa-persistence-unit-1");

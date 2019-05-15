@@ -13,9 +13,9 @@
             <Font name="Corbel" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="RentCarButton" layoutX="46.0" layoutY="130.0" mnemonicParsing="false" onAction="#RentClick" prefHeight="30.0" prefWidth="97.0" text="Rent a Car" textAlignment="CENTER" />
-      <Button fx:id="ViewCarButton" layoutX="197.0" layoutY="130.0" mnemonicParsing="false" onAction="#ViewClick" prefHeight="30.0" prefWidth="97.0" text="View Car List" textAlignment="CENTER" />
-      <Button fx:id="AdminButton" layoutX="349.0" layoutY="130.0" mnemonicParsing="false" onAction="#AdminClick" prefHeight="30.0" prefWidth="97.0" text="Admin Panel" textAlignment="CENTER" />
+      <Button fx:id="RentCarButton" layoutX="46.0" layoutY="130.0" mnemonicParsing="false" onAction="#rentClick" prefHeight="30.0" prefWidth="97.0" text="Rent a Car" textAlignment="CENTER" />
+      <Button fx:id="ViewCarButton" layoutX="197.0" layoutY="130.0" mnemonicParsing="false" onAction="#viewClick" prefHeight="30.0" prefWidth="97.0" text="View Car List" textAlignment="CENTER" />
+      <Button fx:id="AdminButton" layoutX="349.0" layoutY="130.0" mnemonicParsing="false" onAction="#adminClick" prefHeight="30.0" prefWidth="97.0" text="Admin Panel" textAlignment="CENTER" />
    </children>
    <opaqueInsets>
       <Insets />

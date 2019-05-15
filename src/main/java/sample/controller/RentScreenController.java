@@ -15,8 +15,6 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
-import java.text.ParseException;
-import java.time.Duration;
 import java.util.ResourceBundle;
 import java.util.*;
 
@@ -111,7 +109,7 @@ public class RentScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Logger.info("Initializing database...");
-        LoadDatabase();
+        loadDatabase();
     }
 
     /**
@@ -119,7 +117,7 @@ public class RentScreenController implements Initializable {
      * @param event A button press down.
      */
     @FXML
-    public void MainClickRent(ActionEvent event) {
+    public void mainClickRent(ActionEvent event) {
         Logger.info("Returning to the Main Screen...");
         try {
             Node source = (Node) event.getSource();
@@ -143,7 +141,7 @@ public class RentScreenController implements Initializable {
      * @param event A button press down.
      */
     @FXML
-    public void RentSelectedClick(ActionEvent event) {
+    public void rentSelectedClick(ActionEvent event) {
         Logger.info("Updating the table, with the renting person's specified informations...");
 
         try {
@@ -164,7 +162,7 @@ public class RentScreenController implements Initializable {
 
             em.close();
             emf.close();
-            LoadDatabase();
+            loadDatabase();
             AddName.clear();
             AddPhone.clear();
             AddDateFrom.setValue(null);
@@ -179,7 +177,7 @@ public class RentScreenController implements Initializable {
     /**
      * This method is called, when the window is opened up, and loads the data from the database.
      */
-    private void LoadDatabase(){
+    private void loadDatabase(){
         Logger.info("Processing...");
         try {
             emf = Persistence.createEntityManagerFactory("jpa-persistence-unit-1");

@@ -21,7 +21,7 @@ public class MainScreenController {
      * @param event A button press down.
      */
     @FXML
-    public void RentClick(ActionEvent event) {
+    public void rentClick(ActionEvent event) {
         Logger.info("Opening the Renting Screen Window...");
         try {
             Node source = (Node) event.getSource();
@@ -44,7 +44,7 @@ public class MainScreenController {
      * @param event A button press down.
      */
     @FXML
-    public void ViewClick(ActionEvent event) {
+    public void viewClick(ActionEvent event) {
         Logger.info("Opening the View Cars Screen Window...");
         try {
             Node source = (Node) event.getSource();
@@ -66,7 +66,7 @@ public class MainScreenController {
      * @param event A button press down.
      */
     @FXML
-    public void AdminClick(ActionEvent event) {
+    public void adminClick(ActionEvent event) {
         Logger.info("Opening the Admin Screen Window...");
         try {
             Node source = (Node) event.getSource();

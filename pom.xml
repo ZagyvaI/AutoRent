@@ -200,7 +200,7 @@
                 <version>3.0.0</version>
                 <configuration>
                     <configLocation>
-                        checkstyle.xml
+                        src/main/resources/checkstyle.xml
                     </configLocation>
                 </configuration>
                 <reportSets>

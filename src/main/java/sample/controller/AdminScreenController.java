@@ -140,7 +140,7 @@ public class AdminScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Logger.info("Initializing database...");
-        LoadDatabase();
+        loadDatabase();
     }
 
     /**
@@ -148,7 +148,7 @@ public class AdminScreenController implements Initializable {
      * @param event A button press down.
      */
     @FXML
-    public void MainClickAdmin(ActionEvent event) {
+    public void mainClickAdmin(ActionEvent event) {
         Logger.info("Returning to the Main Screen...");
         try {
             Node source = (Node) event.getSource();
@@ -171,7 +171,7 @@ public class AdminScreenController implements Initializable {
      * @param event A button press down.
      */
     @FXML
-    public void AdminDelClick(ActionEvent event) {
+    public void adminDelClick(ActionEvent event) {
         Logger.info("Deleting a car from database...");
         try {
             emf = Persistence.createEntityManagerFactory("jpa-persistence-unit-1");
@@ -188,7 +188,7 @@ public class AdminScreenController implements Initializable {
 
             em.close();
             emf.close();
-            LoadDatabase();
+            loadDatabase();
         }
         catch (RuntimeException e){
             Logger.error("RuntimeException", new RuntimeException(e));
@@ -200,16 +200,16 @@ public class AdminScreenController implements Initializable {
      * @param event A button press down.
      */
     @FXML
-    public void AdminAddClick(ActionEvent event) {
+    public void adminAddClick(ActionEvent event) {
         Logger.info("Addig a car to the database...");
-        AddCar(AdminAddPlateNumber.getText(),
+        addCar(AdminAddPlateNumber.getText(),
                 AdminAddManufact.getText(),
                 AdminAddModel.getText(),
                 AdminAddEngine.getText(),
                 Integer.parseInt(AdminAddCost.getText()),
                 "N", "N", "N", "N"
         );
-        LoadDatabase();
+        loadDatabase();
         AdminAddPlateNumber.clear();
         AdminAddManufact.clear();
         AdminAddModel.clear();
@@ -221,7 +221,7 @@ public class AdminScreenController implements Initializable {
      * This method is called, when the window is opened up, and loads the data from the database.
      */
     @FXML
-    private void LoadDatabase() {
+    private void loadDatabase() {
         Logger.info("Processing...");
         try {
             emf = Persistence.createEntityManagerFactory("jpa-persistence-unit-1");
@@ -265,7 +265,7 @@ public class AdminScreenController implements Initializable {
     }
 
     /**
-     * This method is called by the AdminAddClick event.
+     * This method is called by the adminAddClick event.
      * @param rendszam String, License Plate Number of the car.
      * @param marka String, the Manufacturer of the car.
      * @param tipus String, the Model type of the car.
@@ -276,7 +276,7 @@ public class AdminScreenController implements Initializable {
      * @param nev String, the name of the renter person.
      * @param telefon String, the phone number of the renter person.
      */
-    private void AddCar(String rendszam, String marka, String tipus, String motor, int koltseg, String kezdet, String leadas, String nev, String telefon){
+    private void addCar(String rendszam, String marka, String tipus, String motor, int koltseg, String kezdet, String leadas, String nev, String telefon){
         Logger.info("Processing...");
         emf = Persistence.createEntityManagerFactory("jpa-persistence-unit-1");
         em = emf.createEntityManager();

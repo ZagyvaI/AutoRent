@@ -8,7 +8,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AdminScreenController">
    <children>
-      <Button fx:id="MainButtonAdmin" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#MainClickAdmin" text="Main Menu" />
+      <Button fx:id="MainButtonAdmin" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#mainClickAdmin" text="Main Menu" />
       <TableView fx:id="AdminTable" layoutX="11.0" layoutY="70.0" prefHeight="328.0" prefWidth="772.0">
         <columns>
           <TableColumn fx:id="AdminPlateNumber" prefWidth="135.0" text="License Plate Number" />
@@ -22,12 +22,12 @@
             <TableColumn fx:id="AdminPhone" prefWidth="87.0" text="Phone" />
         </columns>
       </TableView>
-      <Button fx:id="AdminDeleteSelected" layoutX="686.0" layoutY="24.0" mnemonicParsing="false" onAction="#AdminDelClick" text="Delete Selected" />
+      <Button fx:id="AdminDeleteSelected" layoutX="686.0" layoutY="24.0" mnemonicParsing="false" onAction="#adminDelClick" text="Delete Selected" />
       <TextField fx:id="AdminAddPlateNumber" layoutX="11.0" layoutY="404.0" prefHeight="25.0" prefWidth="133.0" promptText="License Plate Number" />
       <TextField fx:id="AdminAddManufact" layoutX="151.0" layoutY="404.0" prefHeight="25.0" prefWidth="87.0" promptText="Manufacturer" />
       <TextField fx:id="AdminAddModel" layoutX="245.0" layoutY="404.0" prefHeight="25.0" prefWidth="62.0" promptText="Model" />
       <TextField fx:id="AdminAddEngine" layoutX="313.0" layoutY="404.0" prefHeight="25.0" prefWidth="87.0" promptText="Engine Type" />
       <TextField fx:id="AdminAddCost" layoutX="408.0" layoutY="404.0" prefHeight="25.0" prefWidth="76.0" promptText="Cost / Day" />
-      <Button fx:id="AdminAddSelelcted" layoutX="529.0" layoutY="404.0" mnemonicParsing="false" onAction="#AdminAddClick" text="Add To List" />
+      <Button fx:id="AdminAddSelelcted" layoutX="529.0" layoutY="404.0" mnemonicParsing="false" onAction="#adminAddClick" text="Add To List" />
    </children>
 </Pane>
